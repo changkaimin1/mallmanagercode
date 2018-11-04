@@ -5,9 +5,16 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/index.css'
 import App from './App'
+import moment from 'moment'
 import router from './router'
 
 Vue.use(ElementUI)
+
+//过滤器
+Vue.filter('fmtDate',function(v){
+
+  return moment(v).format('YYYY-MM-DD')
+})
 
 Vue.config.productionTip = false
 
